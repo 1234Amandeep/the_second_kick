@@ -1,0 +1,1 @@
+<h1>Home.php (for showcasing latest blogs)</h1>
