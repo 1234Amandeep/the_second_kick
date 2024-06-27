@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./template-parts/*.{php,html,js}", "./*.{php,html,js}"],
   theme: {
+    fontFamily: {
+      nunito: ["Nunito", "sans-serif"],
+    },
     borderRadius: {
       none: "0",
       sm: "0.125rem",
@@ -30,7 +33,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#221E3C",
+        primary: {
+          DEFAULT: "#221E3C",
+          500: "rgba(34, 30, 60, 0.5)",
+          700: "rgba(34, 30, 60, 0.8)",
+        },
       },
     },
   },

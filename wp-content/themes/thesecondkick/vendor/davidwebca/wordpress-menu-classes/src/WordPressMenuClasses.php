@@ -1,43 +1,6 @@
 <?php
 
-// enqueing styles && scripts
-function thesecondkick_enquing_styles()
-{
-	wp_enqueue_style("tailwindcss", get_template_directory_uri(). "/src/output.css", array(), "3.4.4", "all");
-	wp_enqueue_style("nunitofonts", "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-}
-add_action("wp_enqueue_scripts", "thesecondkick_enquing_styles");
-
-
-function thesecondkick_enquing_scripts()
-{
-	wp_enqueue_script("fontawesome", "https://kit.fontawesome.com/6a92cf77a8.js", array(), null, true);
-	wp_enqueue_script("scriptjs", get_template_directory_uri()."/js/script.js", array("fontawesome"), null, true);
-}
-add_action("wp_enqueue_scripts", "thesecondkick_enquing_scripts");
-
-// adding theme supports
-function thesecondkick_adding_theme_supports()
-{
-	add_theme_support( 'custom-logo' );
-}
-add_action("after_setup_theme", "thesecondkick_adding_theme_supports");
-
-// registering nav menus
-function register_my_menus() {
-  register_nav_menus(
-    array(
-      'header-menu' => 'Header Menu',
-      'header-menu-expanded' => 'Header Menu Expanded'
-     )
-   );
- }
- add_action( 'init', 'register_my_menus' );
-
-
-
-//  **********
-
+namespace davidwebca\WordPress;
 
 class WordPressMenuClasses
 {

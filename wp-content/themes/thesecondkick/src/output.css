@@ -446,10 +446,6 @@ video {
   display: none;
 }
 
-html {
-  font-family: "Nunito", sans-serif;
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -596,20 +592,36 @@ html {
   position: static;
 }
 
+.ms-1 {
+  margin-inline-start: 0.25rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .cursor-pointer {
   cursor: pointer;
 }
 
-.place-content-between {
-  place-content: space-between;
-}
-
 .items-center {
   align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-x-4 {
@@ -636,6 +648,15 @@ html {
   background-color: rgb(34 30 60 / var(--tw-bg-opacity));
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -646,9 +667,22 @@ html {
   padding-bottom: 0.5rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
+.align-middle {
+  vertical-align: middle;
+}
+
+.font-nunito {
+  font-family: Nunito, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xs {
@@ -656,8 +690,12 @@ html {
   line-height: 1rem;
 }
 
-.font-bold {
-  font-weight: 700;
+.font-extrabold {
+  font-weight: 800;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .text-primary {
@@ -665,7 +703,86 @@ html {
   color: rgb(34 30 60 / var(--tw-text-opacity));
 }
 
+.text-primary-700 {
+  color: rgba(34, 30, 60, 0.8);
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,200..1000&display=swap");
+
+@layer base {
+  html {
+    font-family: "Nunito", sans-serif;
+  }
+} */
+
+.hover\:bg-primary-700:hover {
+  background-color: rgba(34, 30, 60, 0.8);
+}
+
+.hover\:bg-slate-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(34 30 60 / var(--tw-text-opacity));
+}
+
+.focus\:text-primary:focus {
+  --tw-text-opacity: 1;
+  color: rgb(34 30 60 / var(--tw-text-opacity));
+}
+
+.focus\:text-primary-700:focus {
+  color: rgba(34, 30, 60, 0.8);
+}
+
+@media (min-width: 640px) {
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-xl\/3 {
+    font-size: 1.25rem;
+    line-height: .75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:text-2xl\/4 {
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
+
+  .lg\:text-3xl\/4 {
+    font-size: 1.875rem;
+    line-height: 1rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }

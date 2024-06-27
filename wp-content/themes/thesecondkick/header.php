@@ -21,35 +21,82 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
-  <!-- TODO: CREATE A NAVBAR CONTROLLED BY WP -->
-  <header class="py-2 bg-gray-50 text-primary">
-    <nav class="container flex place-content-between text-xs items-center">
-      <!-- branding -->
-      <div class="flex">
-        <!-- <span>
-          <img src="src/assets/resized_logo.jpg" alt="site-logo" srcset="">
-        </span> -->
-        <p class="text-base font-bold		">
-          The Second Kick
-        </p>
+<body class="font-nunito">
+  <header class="bg-gray-50 text-primary">
+    <nav class="container text-sm">
+      <div class="row-1 flex justify-between items-center px-2 sm:px-0">
+        <div class="branding flex items-center cursor-pointer">
+          <?php
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+            if ( has_custom_logo() ) {
+              echo '<img class="align-middle" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"  width="60" height="60">';
+            }            
+          ?>
+          <a href="#" class="lg:text-3xl md:text-xl/3 text-sm  ms-1 tracking-wide font-extrabold mt-1"
+            tabindex="1"><?php echo bloginfo("name"); ?></a>
+        </div>
+        <span id="menu-toggler-open" class="icon lg:hidden ">
+          <i tabindex="2" class=" cursor-pointer focus:text-primary-700 text-primary text-2xl fa-solid fa-bars"></i>
+        </span>
+        <span id="menu-toggler-close" class="icon hidden lg:hidden">
+          <i tabindex="2" class="cursor-pointer focus:text-primary-700 text-primary text-2xl fa-solid fa-xmark"></i>
+        </span>
+
+        <?php
+          $defaults = array(
+            'theme_location'  => 'header-menu',
+            
+            'container_class' => 'block hidden lg:block',
+            'menu_class'      => 'flex gap-x-4 items-center mt-1 text-primary-700',
+            'li_atts_0'       => [
+              'tabindex' => "2"
+            ],
+            'li_class'        => ['hover___bg-slate-200', 'px-2', 'py-2', 'cursor-pointer', 'focus___text-primary'],
+            'a_class' => "text-primary",
+            );
+          wp_nav_menu(
+          $defaults
+          );
+        ?>
       </div>
-      <!-- navlinks -->
-      <ul class="flex gap-x-4 items-center">
-        <li class="cursor-pointer">Home</li>
-        <li class="cursor-pointer">About Us</li>
-        <li class="cursor-pointer">Contact Us</li>
-        <li class="cursor-pointer">News & Events</li>
-        <li class="bg-primary	text-white px-4 py-2 rounded-lg cursor-pointer">Book a free Trail</li>
-      </ul>
+      <div class="row-2 text-xs">
+        <?php
+          $defaults = array(
+            'theme_location'  => 'header-menu',
+            'container_id'    => 'nav-links-expanded',
+            'container_class' => 'text-xs hidden lg:hidden',
+            'menu_class'      => 'p-2',
+            'li_atts_0'       => [
+              'tabindex' => "2"
+            ],
+            'li_class'        => ['hover___bg-slate-200', 'px-2', 'py-2', 'cursor-pointer', 'hover___text-primary', 'focus___text-primary'],
+            'a_class_0' => "text-primary",
+            );
+          wp_nav_menu(
+          $defaults
+          );
+        ?>
+      </div>
     </nav>
   </header>
   <hr class="border-gray-200 border-1">
 
+
+
+
+
+
+
+
+
   <!-- TODO😢
-  1. FIGURE OUT THE CORRECT WAY TO ADD FONT-FAMILY OF MULTIPLE WEIGHTS
-  2. IMPLEMENT HOVER STATE IN NAVBAR
-  3. FIGURE OUT A WAY TO LOAD LOGO AND OTHER LOCAL IMAGES
-  4. MAKE IT LOOK AS CLOSE TO DESIGN AS POSSIBLE
-  5. MAKE IT DYNAMIC AND CONTOLLED BY WP 
+  1. FIGURE OUT THE CORRECT WAY TO ADD FONT-FAMILY OF MULTIPLE WEIGHTS ✅
+  2. FIGURE OUT A WAY TO LOAD LOGO AND OTHER LOCAL IMAGES ✅
+  3. SETUP WHOLE COLOUR FONT-SIZE/WEIGHT SYSTEM IN TAILWIND.CONFIG FILE ✅
+  4. IMPLEMENT HOVER STATE IN NAVBAR ✅
+  5. FIGURE OUT WHY ITS NOT TAKING UP FULL NAV CONTAINER :30 ✅
+  6. MAKE IT LOOK AS CLOSE TO DESIGN AS POSSIBLE ✅
+  7. :104 ACTING WEIRED GETTING SPACES AROUND IT WHEN INSERTED INPLACE OF NAV-LINKS :49 ✅
+  8. MAKE IT RESPONSIVE, DYNAMIC AND CONTOLLED BY WP ✅
   -->
