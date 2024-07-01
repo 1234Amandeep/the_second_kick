@@ -21,10 +21,14 @@
   <?php wp_head(); ?>
 </head>
 
-<body class="font-nunito">
+<body class="font-nunito text-primary">
+  <!-- header -->
   <header class="bg-gray-50 text-primary">
+    <!-- navbar -->
     <nav class="container text-sm">
-      <div class="row-1 flex justify-between items-center px-2 sm:px-0">
+
+      <div class="row-1 flex justify-between items-center px-1 sm:px-0">
+        <!-- nav-branding -->
         <div class="branding flex items-center cursor-pointer">
           <?php
             $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -33,16 +37,19 @@
               echo '<img class="align-middle" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"  width="60" height="60">';
             }            
           ?>
-          <a href="#" class="lg:text-3xl md:text-xl/3 text-sm  ms-1 tracking-wide font-extrabold mt-1"
+          <a href="#" class=" sm:text-2xl text-lg   sm:ms-1 tracking-wide font-extrabold mt-1"
             tabindex="1"><?php echo bloginfo("name"); ?></a>
         </div>
+        <!-- nav-branding ends here -->
+        <!-- nav-links-toggler -->
         <span id="menu-toggler-open" class="icon lg:hidden ">
           <i tabindex="2" class=" cursor-pointer focus:text-primary-700 text-primary text-2xl fa-solid fa-bars"></i>
         </span>
         <span id="menu-toggler-close" class="icon hidden lg:hidden">
           <i tabindex="2" class="cursor-pointer focus:text-primary-700 text-primary text-2xl fa-solid fa-xmark"></i>
         </span>
-
+        <!-- nav-links-toggler ends here -->
+        <!-- nav-links expanded -->
         <?php
           $defaults = array(
             'theme_location'  => 'header-menu',
@@ -60,6 +67,8 @@
           );
         ?>
       </div>
+      <!-- nav-links expanded ends here -->
+      <!-- nav-links contrac -->
       <div class="row-2 text-xs">
         <?php
           $defaults = array(
@@ -78,9 +87,12 @@
           );
         ?>
       </div>
+      <!-- nav-links contr ends here -->
     </nav>
+    <!-- navbar ends here -->
   </header>
   <hr class="border-gray-200 border-1">
+  <!-- header ends here -->
 
 
 

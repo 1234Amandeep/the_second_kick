@@ -1,5 +1,18 @@
 <?php
 
+//******************* */
+require_once dirname( __FILE__ ) . '/options.php';
+
+
+
+
+
+
+
+
+
+
+//******************* */
 // enqueing styles && scripts
 function thesecondkick_enquing_styles()
 {
@@ -20,6 +33,7 @@ add_action("wp_enqueue_scripts", "thesecondkick_enquing_scripts");
 function thesecondkick_adding_theme_supports()
 {
 	add_theme_support( 'custom-logo' );
+    add_theme_support( 'title-tag' ); //with this wp will handle adding title for each page. Customizable as well
 }
 add_action("after_setup_theme", "thesecondkick_adding_theme_supports");
 
@@ -28,7 +42,7 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'header-menu' => 'Header Menu',
-      'header-menu-expanded' => 'Header Menu Expanded'
+    //   'header-menu-expanded' => 'Header Menu Expanded'
      )
    );
  }
@@ -36,7 +50,7 @@ function register_my_menus() {
 
 
 
-//  **********
+//  ********** Library for customizing navs by davidwebca **********
 
 
 class WordPressMenuClasses
@@ -214,3 +228,6 @@ class WordPressMenuClasses
 if (function_exists('add_action')) {
     new WordPressMenuClasses();
 }
+
+//  ********** Library for customizing navs by davidwebca **********
+//  ********** ends here **********

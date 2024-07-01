@@ -38,6 +38,22 @@ module.exports = {
           500: "rgba(34, 30, 60, 0.5)",
           700: "rgba(34, 30, 60, 0.8)",
         },
+        "grad-red": {
+          0: "rgba(211, 55, 55, 0.9)",
+          100: "rgba(99, 62, 62, 1.0)",
+        },
+      },
+      gap: {
+        col: "74px",
+        "col-0.5": "24px",
+      },
+      margin: {
+        20: "96px",
+        10: "48px",
+      },
+      backgroundImage: {
+        "hero-pattern":
+          "url('src/assets/images/team_photo_district_league.jpeg')",
       },
     },
   },
