@@ -32,6 +32,11 @@ module.exports = {
       center: true,
     },
     extend: {
+      spacing: {
+        10: "3rem",
+        20: "96px",
+        22: "128px",
+      },
       colors: {
         primary: {
           DEFAULT: "#221E3C",
@@ -47,10 +52,7 @@ module.exports = {
         col: "74px",
         "col-0.5": "24px",
       },
-      margin: {
-        20: "96px",
-        10: "48px",
-      },
+
       backgroundImage: {
         "hero-pattern":
           "url('src/assets/images/team_photo_district_league.jpeg')",

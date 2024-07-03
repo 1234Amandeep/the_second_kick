@@ -34,6 +34,7 @@ function thesecondkick_adding_theme_supports()
 {
 	add_theme_support( 'custom-logo' );
     add_theme_support( 'title-tag' ); //with this wp will handle adding title for each page. Customizable as well
+    add_theme_support( 'widgets' );
 }
 add_action("after_setup_theme", "thesecondkick_adding_theme_supports");
 
@@ -231,3 +232,14 @@ if (function_exists('add_action')) {
 
 //  ********** Library for customizing navs by davidwebca **********
 //  ********** ends here **********
+
+function social_media_icons( $contactmethods ) {
+    // Add social media
+    $contactmethods['youtube'] = 'Youtube';
+    $contactmethods['facebook'] = 'Facebook';
+    $contactmethods['instagram'] = 'Instagram';
+    $contactmethods['threads'] = 'Thread';
+
+    return $contactmethods;
+}
+add_filter('user_contactmethods','social_media_icons',10,1);
