@@ -34,12 +34,11 @@ function thesecondkick_adding_theme_supports()
 {
 	add_theme_support( 'custom-logo' );
     add_theme_support( 'title-tag' ); //with this wp will handle adding title for each page. Customizable as well
-    add_theme_support( 'widgets' );
 }
 add_action("after_setup_theme", "thesecondkick_adding_theme_supports");
 
 // registering nav menus
-function register_my_menus() {
+function thesecondkick_register_my_menus() {
   register_nav_menus(
     array(
       'header-menu' => 'Header Menu',
@@ -47,8 +46,28 @@ function register_my_menus() {
      )
    );
  }
- add_action( 'init', 'register_my_menus' );
+ add_action( 'init', 'thesecondkick_register_my_menus' );
 
+
+// register sidebar widget area on backend
+function thesecondkick_register_sidebar_widget_area()
+{
+    register_sidebar(
+        array(
+                'before_title'   => '',
+                'after_title'    => '',
+                'before_widget'  => '',
+                'after_widget'   => '',         
+        ),
+            array(
+                'name'          => 'Social Media Icons Sidebar',
+                'id'            => 'sidebar-1',
+                'description'   => 'This is a social media icons adding sidebar widget area', 
+            ),
+            
+        );
+}
+add_action('widgets_init', 'thesecondkick_register_sidebar_widget_area');
 
 
 //  ********** Library for customizing navs by davidwebca **********
