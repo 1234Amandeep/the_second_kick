@@ -23,7 +23,7 @@
 
 <body class="font-nunito text-primary">
   <!-- header -->
-  <header class="bg-gray-50 text-primary">
+  <header class="bg-gray-50 text-primary sticky top-0">
     <!-- navbar -->
     <nav class="container text-sm">
 

@@ -5,16 +5,7 @@ module.exports = {
     fontFamily: {
       nunito: ["Nunito", "sans-serif"],
     },
-    borderRadius: {
-      none: "0",
-      sm: "0.125rem",
-      DEFAULT: "0.25rem",
-      DEFAULT: "4px",
-      md: "0.375rem",
-      lg: "0.5rem",
-      full: "9999px",
-      large: "12px",
-    },
+
     screens: {
       sm: "640px",
       // => @media (min-width: 640px) { ... }
@@ -32,6 +23,9 @@ module.exports = {
       center: true,
     },
     extend: {
+      borderRadius: {
+        lg: "0.5rem",
+      },
       spacing: {
         10: "3rem",
         20: "96px",

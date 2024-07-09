@@ -2,79 +2,125 @@
 get_header()
 ?>
 
-<!-- ***************** Grabing Content from WP -> (custom_content_setup_menu page) ***************** -->
-<?php 
-$heroku_headline = get_option('heroku_headline');
-$heroku_paragraph = get_option('heroku_paragraph');
-$heroku_img_url = get_option('heroku_img_url');
-$heroku_association1_img_url = get_option('heroku_association1_img_url');
-$heroku_association2_img_url = get_option('heroku_association2_img_url');
-$heroku_association3_img_url = get_option('heroku_association3_img_url');
-$heroku_association4_img_url = get_option('heroku_association4_img_url');
-?>
-<!-- ***************** Got the content ***************** -->
-
-<!-- heroku section -->
-<!-- {navbar[12]}[5%] -->
-<!-- {text[4]  ----- space[1] ----- img[7]}[60%] -->
-<!-- {space[1-0]---- assocs[8-12] ----space[1-0]}[35%] -->
-<!-- heroku section -->
-
 <!-- ********* main-section ********* -->
-<main class="container   mb-20" id="content">
-  <!-- heroku-section -->
-  <div class="heroku-container lg:mt-20 md:mt-10 sm:mt-5 grid  gap-5  sm:gap-[96px]">
-    <!-- grid-rows-2 use it to make two colms-->
-    <!-- heroku-section-row1 -->
-    <div
-      class="heroku-container__row1-container flex flex-col lg:flex-row lg:gap-col md:gap-col-0.5 justify-between items-center bg-gradient-to-tr from-grad-red-0 to-grad-red-100 sm:bg-none text-white sm:text-primary py-8 sm:py-0 ">
-      <!-- heroku-section-row1 > img-container -->
-      <div class="order-1 lg:order-2 lg:w-8/12 md:w-full tagline-img-container flex justify-end">
-        <img src="<?php echo $heroku_img_url; ?>" alt="district-league-team-photo" class="rounded-lg hidden sm:block">
-      </div>
-      <!-- heroku-section-row1 > img-container ends here -->
-      <!-- heroku-section-row1 > text-container -->
-      <div class="order-2 lg:order-1 lg:w-4/12 md:w-8/12 m-3  tagline-container flex   flex-col md:gap-3 gap-2 ">
-        <h1 class="sm:text-5xl text-center  lg:text-left text-3xl tracking-wide  lg:tracking-tight font-semibold">
-          <?php echo $heroku_headline; ?></h1>
-        <p class=" tracking-wide text-xs text-justify lg:text-left lg:text-sm  leading-5 mb-2">
-          <?php echo $heroku_paragraph; ?>
-        </p>
-        <div class="btn-container flex justify-center lg:justify-start">
-          <button tabindex="6"
-            class="bg-primary hover:bg-primary-700	text-white px-4 py-2 rounded-lg cursor-pointer text-xs md:text-sm lg:text-base font-normal "><i
-              class="fa-solid fa-play me-1"></i> Know
-            more
-          </button>
+<main class="   mb-20" id="content">
+  <!-- grabing heroku from template-parts/content-heroku -->
+  <?php get_template_part( 'template-parts/content', 'heroku' ); ?>
+
+  <!-- grabbing our-milestones section from template-parts/content-milestones -->
+  <section class="our-milestones-outer-container mt-20 bg-slate-200 pt-10 pb-20">
+    <div class="our-milestones-inner-container container flex flex-col items-center">
+      <h1 class=" sm:text-5xl  sm:font-black text-2xl font-bold">Our milestones</h1>
+      <div
+        class="mile-cards-container  grid md:grid-rows-1 md:grid-cols-3 md:gap-20  md:mt-20 sm:grid-rows-2 sm:grid-cols-2 sm:gap-x-8 gap-y-20  sm:mt-20 grid-rows-3 grid-cols-1 gap-x-8 gap-y-20  md:mt-20 sm:mx-0   sm:pt-0 pt-20 mx-5 sm:mx-0">
+        <div
+          class="card  flex flex-col items-center p-5 gap-col-0.5 rounded-xl hover:cursor-pointer  border border-primary bg-gray-50 hover:bg-slate-200 hover:shadow-lg hover:shadow-gray-500/50">
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mile/mile1.png" alt="card1-img"
+            width="150" class="">
+          <ul class="text-sm font-base italic ">
+            <li><i class="fa-solid fa-arrow-right"></i> Grassroot Training</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Selected - U.P Mandal Team 2024</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Khelo India U-17</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Ghaziabad District League</li>
+          </ul>
+          <div class=" player-creds font-semibold">
+            <span class="player-name ">Akshay Saini,</span>
+            <span class="player-age">U-16</span>
+          </div>
         </div>
+        <div
+          class="card  flex flex-col items-center p-5 gap-col-0.5 rounded-xl hover:cursor-pointer  border border-primary bg-gray-50 hover:bg-slate-200 hover:shadow-lg hover:shadow-gray-500/50">
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mile/mile2.png" alt="card1-img"
+            width="150" class="">
+          <ul class="text-sm font-base italic ">
+            <li><i class="fa-solid fa-arrow-right"></i> Grassroot Training</li>
+            <li><i class="fa-solid fa-arrow-right"></i> School National Games U-17</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Khelo India U-17</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Ghaziabad District League</li>
+          </ul>
+          <div class=" player-creds font-semibold">
+            <span class="player-name ">Akshay Saini,</span>
+            <span class="player-age">U-16</span>
+          </div>
+        </div>
+        <div
+          class="card  flex flex-col items-center p-5 gap-col-0.5 rounded-xl hover:cursor-pointer  border border-primary bg-gray-50 hover:bg-slate-200 hover:shadow-lg hover:shadow-gray-500/50">
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mile/mile3.png" alt="card1-img"
+            width="150" class="">
+          <ul class="text-sm font-base italic ">
+            <li><i class="fa-solid fa-arrow-right"></i> Grassroot Training</li>
+            <li><i class="fa-solid fa-arrow-right"></i> School National Games U-17</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Khelo India U-17</li>
+            <li><i class="fa-solid fa-arrow-right"></i> Ghaziabad District League</li>
+          </ul>
+          <div class=" player-creds font-semibold">
+            <span class="player-name ">Akshay Saini,</span>
+            <span class="player-age">U-16</span>
+          </div>
+        </div>
+
       </div>
-      <!-- heroku-section-row1 > img-container ends here -->
     </div>
-    <!-- heroku-section-row1 ends here -->
-    <!-- heroku-section-row2 -->
-    <div class="heroku-container__row2-container flex items-end justify-center items-center">
-      <!-- heroku-section-row2 > association-container -->
-      <div class="association-container w-8/12 sm:w-9/12 flex sm:flex-row flex-col gap-5 lg:gap-[96px] items-center">
-        <div class="w-6/12 lg:w-8/12  flex items-center cursor-pointer">
-          <img src="<?php echo $heroku_association1_img_url; ?>" alt="district-league-team-photo">
-        </div>
-        <div class="w-6/12 lg:w-8/12  flex items-center cursor-pointer">
-          <img src="<?php echo $heroku_association2_img_url ?>" alt="district-league-team-photo">
-        </div>
-        <div class="w-6/12 lg:w-8/12  flex items-center cursor-pointer">
-          <img src="<?php echo $heroku_association3_img_url ?>" alt="district-league-team-photo">
-        </div>
-        <div class="w-6/12 lg:w-8/12  flex items-center cursor-pointer">
-          <img src="<?php echo $heroku_association4_img_url ?>">
-        </div>
-      </div>
-      <!-- heroku-section-row2 > association-container ends here -->
-    </div>
-    <!-- heroku-section-row2 ends here -->
-  </div>
-  <!-- heroku-section ends here-->
+
+  </section>
+
 </main>
 <!-- ********* main-section ends here ********* -->
 <?php
 get_footer()
 ?>
+<!-- 
+<div
+          class="card p-4 rounded-xl  backdrop-blur-lg bg-white/70 relative pt-20 hover:cursor-pointer hover:opacity-0">
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mile/mile2.png" alt="card1-img"
+            width="150" class="absolute mx-auto left-0 right-0 -top-10 ">
+          <div class=" player-attr-list-container my-5">
+            <ul class=" font-base italic mx-auto">
+              <li><i class="fa-solid fa-arrow-right"></i> Grassroot Training</li>
+              <li><i class="fa-solid fa-arrow-right"></i> School National Games U-17</li>
+              <li><i class="fa-solid fa-arrow-right"></i> Khelo India U-17</li>
+              <li><i class="fa-solid fa-arrow-right"></i> Ghaziabad District League</li>
+            </ul>
+          </div>
+          <div class=" player-creds flex justify-center gap-2">
+            <span class="player-name">Akshay Saini</span>
+            <span class="player-age">16</span>
+          </div>
+        </div>
+        <div class="card p-4 rounded-xl  backdrop-blur-lg bg-white/70 relative pt-20 hover:cursor-pointer">
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mile/mile3.png" alt="card1-img"
+            width="150" class="absolute mx-auto left-0 right-0 -top-10 ">
+          <div class=" player-attr-list-container my-5">
+            <ul class=" font-base italic mx-auto">
+              <li><i class="fa-solid fa-arrow-right"></i> Grassroot Training</li>
+              <li><i class="fa-solid fa-arrow-right"></i> School National Games U-17</li>
+              <li><i class="fa-solid fa-arrow-right"></i> Khelo India U-17</li>
+              <li><i class="fa-solid fa-arrow-right"></i> Ghaziabad District League</li>
+            </ul>
+          </div>
+          <div class=" player-creds flex justify-center gap-2">
+            <span class="player-name ">Akshay Saini</span>
+            <span class="player-age">16</span>
+          </div>
+        </div>
+        <div class="card p-4 rounded-xl  backdrop-blur-lg bg-white/70 relative pt-20 hover:cursor-pointer">
+          <div class="mile-img-container rounded-full">
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/mile/mile1.png" alt="card1-img"
+              width="140" class="absolute mx-auto left-0 right-0 -top-10 ">
+          </div>
+          <div class="card-content flex flex-col gap-5">
+            <div class=" player-attr-list-container ">
+              <ul class=" font-base italic mx-auto">
+                <li class=""><i class="fa-solid fa-arrow-right"></i> Grassroot Training</li>
+                <li class="text-wrap"><i class="fa-solid fa-arrow-right"></i> Selected for U-15 Uttar Pradesh Mandal
+                  2024</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Khelo India U-17</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Ghaziabad District League</li>
+              </ul>
+            </div>
+            <div class=" player-creds flex justify-center gap-2">
+              <span class="player-name">Akshay Saini,</span>
+              <span class="player-age">U-16</span>
+            </div>
+          </div>
+        </div> -->
