@@ -52,6 +52,7 @@ function thesecondkick_register_my_menus() {
 // register sidebar widget area on backend
 function thesecondkick_register_sidebar_widget_area()
 {
+    // sidebar for footer
     register_sidebar(
         array(
                 'before_title'   => '',
@@ -63,6 +64,51 @@ function thesecondkick_register_sidebar_widget_area()
                 'name'          => 'Social Media Icons Sidebar',
                 'id'            => 'sidebar-1',
                 'description'   => 'This is a social media icons adding sidebar widget area', 
+            ),
+            
+        );
+    // sidebar for milestones > card01
+    register_sidebar(
+        array(
+                'before_title'   => '',
+                'after_title'    => '',
+                'before_widget'  => '',
+                'after_widget'   => '',         
+        ),
+            array(
+                'name'          => 'Mile - Player-1 Attributes Sidebar',
+                'id'            => 'sidebar-2',
+                'description'   => 'It is a sidebar to add player-1 attributes', 
+            ),
+            
+        );
+    // sidebar for milestones > card02
+    register_sidebar(
+        array(
+                'before_title'   => '',
+                'after_title'    => '',
+                'before_widget'  => '',
+                'after_widget'   => '',         
+        ),
+            array(
+                'name'          => 'Mile - Player-2 Attributes Sidebar',
+                'id'            => 'sidebar-3',
+                'description'   => 'It is a sidebar to add player-2 attributes', 
+            ),
+            
+        );
+    // sidebar for milestones > card03
+    register_sidebar(
+        array(
+                'before_title'   => '',
+                'after_title'    => '',
+                'before_widget'  => '',
+                'after_widget'   => '',         
+        ),
+            array(
+                'name'          => 'Mile - Player-3 Attributes Sidebar',
+                'id'            => 'sidebar-4',
+                'description'   => 'It is a sidebar to add player-3 attributes', 
             ),
             
         );
