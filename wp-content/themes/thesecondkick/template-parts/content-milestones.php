@@ -23,7 +23,7 @@ $player03_age = $player03_cred[1];
 ?>
 <!-- ***************** Got the content ***************** -->
 
-<section class="our-milestones-outer-container mt-20 bg-slate-200 pt-10 pb-20">
+<section class="our-milestones-outer-container mt-20 bg-slate-200 pt-20 pb-20">
   <div class="our-milestones-inner-container container flex flex-col items-center">
     <h2 class=" sm:text-5xl  sm:font-black text-3xl font-bold">Our milestones</h2>
     <div

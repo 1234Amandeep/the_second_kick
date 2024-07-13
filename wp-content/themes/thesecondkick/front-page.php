@@ -13,6 +13,14 @@ get_header()
   <!-- grabbing our-milestones section from template-parts/content-milestones -->
   <?php get_template_part( 'template-parts/content', 'milestones' ); ?>
 
+  <!-- grabbing cta section from template-parts/content-cta -->
+  <?php get_template_part( 'template-parts/content', 'cta' ); ?>
+
+  <!-- grabbing our-sponsors section from template-parts/content-sponsors -->
+
+
+
+
 </main>
 <!-- ********* main-section ends here ********* -->
 <?php
