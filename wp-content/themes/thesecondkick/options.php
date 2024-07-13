@@ -32,7 +32,14 @@ function register_mysettings() {
 	register_setting( 'thesecondkick-settings-group', 'mile_player02' );
 	register_setting( 'thesecondkick-settings-group', 'mile_player03_img_url' );
 	register_setting( 'thesecondkick-settings-group', 'mile_player03' );
-    // milestones settings ends here
+  // milestones settings ends here
+  // our-sponsors settings
+	register_setting( 'thesecondkick-settings-group', 'sponsors_1st' );
+	register_setting( 'thesecondkick-settings-group', 'sponsors_2nd' );
+	register_setting( 'thesecondkick-settings-group', 'sponsors_3rd' );
+  // our-sponsors settings ends here
+
+  
 }
 
 function custom_content_page() {
@@ -106,6 +113,21 @@ function custom_content_page() {
         <td><input type="text" name="mile_player03" value="<?php echo get_option('mile_player03'); ?>" /></td>
       </tr>
       <!-- Milestones section ends here -->
+      <tr valign="top">
+        <th scope="row">Sponsors 1st</th>
+        <td><input type="text" name="sponsors_1st" value="<?php echo get_option('sponsors_1st'); ?>" />
+        </td>
+      </tr>
+      <tr valign="top">
+        <th scope="row">Sponsors 2nd</th>
+        <td><input type="text" name="sponsors_2nd" value="<?php echo get_option('sponsors_2nd'); ?>" />
+        </td>
+      </tr>
+      <tr valign="top">
+        <th scope="row">Sponsors 3rd</th>
+        <td><input type="text" name="sponsors_3rd" value="<?php echo get_option('sponsors_3rd'); ?>" />
+        </td>
+      </tr>
     </table>
 
     <p class="submit">

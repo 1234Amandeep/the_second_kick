@@ -637,6 +637,14 @@ video {
   margin-top: 96px;
 }
 
+.mt-10 {
+  margin-top: 3rem;
+}
+
+.mb-10 {
+  margin-bottom: 3rem;
+}
+
 .block {
   display: block;
 }
@@ -1129,6 +1137,10 @@ video {
 
   .sm\:gap-\[96px\] {
     gap: 96px;
+  }
+
+  .sm\:gap-0 {
+    gap: 0px;
   }
 
   .sm\:gap-x-8 {

@@ -17,8 +17,7 @@ get_header()
   <?php get_template_part( 'template-parts/content', 'cta' ); ?>
 
   <!-- grabbing our-sponsors section from template-parts/content-sponsors -->
-
-
+  <?php get_template_part( 'template-parts/content', 'sponsors' ); ?>
 
 
 </main>
