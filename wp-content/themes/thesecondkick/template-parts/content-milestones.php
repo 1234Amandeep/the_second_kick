@@ -25,7 +25,7 @@ $player03_age = $player03_cred[1];
 
 <section class="our-milestones-outer-container mt-20 bg-slate-200 pt-10 pb-20">
   <div class="our-milestones-inner-container container flex flex-col items-center">
-    <h1 class=" sm:text-5xl  sm:font-black text-2xl font-bold">Our milestones</h1>
+    <h2 class=" sm:text-5xl  sm:font-black text-3xl font-bold">Our milestones</h2>
     <div
       class="mile-cards-container  grid md:grid-rows-1 md:grid-cols-3 md:gap-20  md:mt-20 sm:grid-rows-2 sm:grid-cols-2 sm:gap-x-8 gap-y-20  sm:mt-20 grid-rows-3 grid-cols-1 gap-x-8 gap-y-20  md:mt-20 sm:mx-0   sm:pt-0 pt-20 mx-5 sm:mx-0">
       <div

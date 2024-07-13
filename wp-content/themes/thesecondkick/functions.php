@@ -112,6 +112,22 @@ function thesecondkick_register_sidebar_widget_area()
             ),
             
         );
+    
+    // sidebar for what-we-offer > whole section
+    register_sidebar(
+        array(
+                'before_title'   => '',
+                'after_title'    => '',
+                'before_widget'  => '',
+                'after_widget'   => '',         
+        ),
+            array(
+                'name'          => 'Wwo - Sidebar',
+                'id'            => 'sidebar-5',
+                'description'   => 'It is a sidebar to add what-we-offer block', 
+            ),
+            
+        );
 }
 add_action('widgets_init', 'thesecondkick_register_sidebar_widget_area');
 
