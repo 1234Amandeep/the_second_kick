@@ -128,6 +128,36 @@ function thesecondkick_register_sidebar_widget_area()
             ),
             
         );
+    // sidebar for faq-section > individual faq
+    register_sidebar(
+        array(
+                'before_title'   => '',
+                'after_title'    => '',
+                'before_widget'  => '',
+                'after_widget'   => '',         
+        ),
+            array(
+                'name'          => 'FAQ - Sidebar',
+                'id'            => 'sidebar-6',
+                'description'   => 'It is a sidebar to add individual faq', 
+            ),
+            
+        );
+    // sidebar for faq-section > group of faqs
+    register_sidebar(
+        array(
+                'before_title'   => '',
+                'after_title'    => '',
+                'before_widget'  => '',
+                'after_widget'   => '',         
+        ),
+            array(
+                'name'          => 'FAQs - Sidebar',
+                'id'            => 'sidebar-7',
+                'description'   => 'It is a sidebar to group all faqs', 
+            ),
+            
+        );
 }
 add_action('widgets_init', 'thesecondkick_register_sidebar_widget_area');
 

@@ -19,6 +19,8 @@ get_header()
   <!-- grabbing our-sponsors section from template-parts/content-sponsors -->
   <?php get_template_part( 'template-parts/content', 'sponsors' ); ?>
 
+  <!-- grabbing faq section from template-parts/content-faq -->
+  <?php get_template_part( 'template-parts/content', 'faq' ); ?>
 
 </main>
 <!-- ********* main-section ends here ********* -->
