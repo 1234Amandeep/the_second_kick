@@ -158,6 +158,21 @@ function thesecondkick_register_sidebar_widget_area()
             ),
             
         );
+    // sidebar for gallary-section > group of pics
+    register_sidebar(
+        array(
+                'before_title'   => '',
+                'after_title'    => '',
+                'before_widget'  => '',
+                'after_widget'   => '',         
+        ),
+            array(
+                'name'          => 'Gallary - Sidebar',
+                'id'            => 'sidebar-8',
+                'description'   => 'It is a sidebar to group all pics', 
+            ),
+            
+        );
 }
 add_action('widgets_init', 'thesecondkick_register_sidebar_widget_area');
 

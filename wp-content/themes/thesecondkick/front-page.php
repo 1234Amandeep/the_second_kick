@@ -22,6 +22,9 @@ get_header()
   <!-- grabbing faq section from template-parts/content-faq -->
   <?php get_template_part( 'template-parts/content', 'faq' ); ?>
 
+  <!-- grabbing gallary section from template-parts/content-gallary -->
+  <?php get_template_part( 'template-parts/content', 'gallary' ); ?>
+
 </main>
 <!-- ********* main-section ends here ********* -->
 <?php
