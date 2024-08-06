@@ -30,6 +30,7 @@ module.exports = {
         10: "3rem",
         20: "96px",
         22: "128px",
+        72: "288",
       },
       colors: {
         primary: {

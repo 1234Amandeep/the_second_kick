@@ -22,8 +22,10 @@ get_header();
   if(get_the_title() == "Team") {
     echo "<h2 class='pt-10 sm:text-5xl  sm:font-black text-3xl font-bold text-center mb-10'>Meet Our Team</h2>";
   
-  } else {
-
+  } else if(get_the_title() == "About Us") {
+    // echo "<h2 class='pt-10 sm:text-5xl  sm:font-black text-3xl font-bold text-center pb-10 bg-slate-200'></h2>";
+  }
+   else {
     echo '<h2 class="pt-10 sm:text-5xl  sm:font-black text-3xl font-bold text-center ">' . get_the_title() . '</h2>';
   }
   ?>
